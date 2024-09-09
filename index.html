@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет материалов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Расчет материалов</h1>
+    <div id="fractions">
+        <div class="fraction" id="RM">
+            <label for="RM_checkbox">Участвует RM</label>
+            <input type="checkbox" id="RM_checkbox">
+            <input type="number" id="RM_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="AM">
+            <label for="AM_checkbox">Участвует AM</label>
+            <input type="checkbox" id="AM_checkbox">
+            <input type="number" id="AM_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="MM">
+            <label for="MM_checkbox">Участвует MM</label>
+            <input type="checkbox" id="MM_checkbox">
+            <input type="number" id="MM_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="YAK">
+            <label for="YAK_checkbox">Участвует YAK</label>
+            <input type="checkbox" id="YAK_checkbox">
+            <input type="number" id="YAK_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="LCN">
+            <label for="LCN_checkbox">Участвует LCN</label>
+            <input type="checkbox" id="LCN_checkbox">
+            <input type="number" id="LCN_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="FAM">
+            <label for="FAM_checkbox">Участвует FAM</label>
+            <input type="checkbox" id="FAM_checkbox">
+            <input type="number" id="FAM_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="ESB">
+            <label for="ESB_checkbox">Участвует ESB</label>
+            <input type="checkbox" id="ESB_checkbox">
+            <input type="number" id="ESB_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="BSG">
+            <label for="BSG_checkbox">Участвует BSG</label>
+            <input type="checkbox" id="BSG_checkbox">
+            <input type="number" id="BSG_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="LSV">
+            <label for="LSV_checkbox">Участвует LSV</label>
+            <input type="checkbox" id="LSV_checkbox">
+            <input type="number" id="LSV_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="MG-13">
+            <label for="MG-13_checkbox">Участвует MG-13</label>
+            <input type="checkbox" id="MG-13_checkbox">
+            <input type="number" id="MG-13_input" min="0" value="0">
+        </div>
+        <div class="fraction" id="materials_per_truck">
+            <label for="materials_per_truck_input">Количество материалов в одном грузовике:</label>
+            <input type="number" id="materials_per_truck_input" min="1" value="1">
+        </div>
+    </div>
+    <button id="calculate">Рассчитать</button>
+    <div id="result"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -19,7 +19,7 @@ function calculateMaterials() {
 
     const totalMaterials = totalTrucks * materialsPerTruck;
     const participatingFractions = Object.keys(trucksPerFraction);
-    const materialsPerFraction = totalMaterials / participatingFractions.length;
+    const materialsPerFraction = Math.round(totalMaterials / participatingFractions.length);
 
     let resultText = `Общее количество грузовиков: ${totalTrucks}\n`;
     resultText += `Общее количество материалов: ${totalMaterials}\n`;
@@ -36,7 +36,7 @@ function calculateMaterials() {
     const obligations = {};
     participatingFractions.forEach(fraction => {
         const trucks = trucksPerFraction[fraction];
-        const excessMaterials = trucks * materialsPerTruck - materialsPerFraction;
+        const excessMaterials = Math.round(trucks * materialsPerTruck - materialsPerFraction);
         obligations[fraction] = excessMaterials;
     });
 
@@ -46,7 +46,7 @@ function calculateMaterials() {
         for (const recipient in simplifiedObligations[donor]) {
             const amount = simplifiedObligations[donor][recipient];
             if (amount > 0) {
-                resultText += `${donor} должны ${recipient} ${amount} материалов\n`;
+                resultText += `${donor} должны ${recipient} ${Math.round(amount)} материалов\n`;
             }
         }
     }
